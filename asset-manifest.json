@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react/static/css/main.ab22d852.css",
+    "main.js": "/react/static/js/main.88d40833.js",
+    "static/js/453.d9e8317e.chunk.js": "/react/static/js/453.d9e8317e.chunk.js",
+    "static/media/interiores.png": "/react/static/media/interiores.134ba29314395401a948.png",
+    "static/media/user1.png": "/react/static/media/user1.81f21247965bcb33e9d9.png",
+    "static/media/user3.png": "/react/static/media/user3.48e5f5ac865803bd3b61.png",
+    "static/media/banio.png": "/react/static/media/banio.3dc346b6e60c15773a10.png",
+    "static/media/cocina.png": "/react/static/media/cocina.ba3a6057d139d9f08bc1.png",
+    "static/media/user2.png": "/react/static/media/user2.8820f1a47aa09358c7fd.png",
+    "static/media/slick.svg": "/react/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/react/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/react/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/react/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/react/index.html",
+    "main.ab22d852.css.map": "/react/static/css/main.ab22d852.css.map",
+    "main.88d40833.js.map": "/react/static/js/main.88d40833.js.map",
+    "453.d9e8317e.chunk.js.map": "/react/static/js/453.d9e8317e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab22d852.css",
+    "static/js/main.88d40833.js"
+  ]
+}
