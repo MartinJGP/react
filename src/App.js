@@ -10,9 +10,9 @@ import './App.css';
 
 function App() {
     return (
-        <Router>
+        <Router basename={"/react"}>
             <NavBar />
-            <Routes>
+            <Routes >
                 <Route path="/" element={<div><CarruselServicios /><ExperienciaServicio /><PiePagina /></div>} />
                 <Route path="/items" element={<DataTable />} />
                 <Route path="/reg" element={<RegItems/>} />
