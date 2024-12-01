@@ -12,11 +12,11 @@ import './App.css';
 function App() {
     return (
         <Router basename={"/react"}>
-            <NavBar />
-            <Routes >
-                <Route path="/" element={<Home/>} />
-                <Route path="/items" element={<DataTable />} />
-                <Route path="/reg" element={<RegItems/>} />
+            <NavBar/>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/items" element={<DataTable/>}/>
+                <Route path="/reg" element={<RegItems/>}/>
             </Routes>
         </Router>
     );
