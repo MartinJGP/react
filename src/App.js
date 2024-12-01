@@ -6,6 +6,7 @@ import PiePagina from './components/FootPage';
 import NavBar from './components/NavBar';
 import DataTable from './components/PruebaItems';
 import RegItems from './components/RegItems';
+import Home from './components/Home';
 import './App.css';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Router basename={"/react"}>
             <NavBar />
             <Routes >
-                <Route path="/" element={<div><CarruselServicios /><ExperienciaServicio /><PiePagina /></div>} />
+                <Route path="/" element={<Home/>} />
                 <Route path="/items" element={<DataTable />} />
                 <Route path="/reg" element={<RegItems/>} />
             </Routes>
