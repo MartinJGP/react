@@ -13,7 +13,7 @@ function RegItems() {
         event.preventDefault();
         const newItem = { name, description, price, category };
 
-        axios.post('https://djangopruebaitems-807a172cd6c4.herokuapp.com/items/', newItem)
+        axios.post('https://django-react-nine.vercel.app/items/', newItem)
             .then(response => {
                 console.log('Item registered:', response.data);
                 // Clear the form
