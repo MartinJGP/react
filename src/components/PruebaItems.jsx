@@ -12,19 +12,22 @@ import {
     Button
 } from '@mui/material';
 import axios from 'axios';
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function DataTable() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get('https://djangopruebaitems-807a172cd6c4.herokuapp.com/items/') // Reemplaza con la URL de tu API
-            .then(response => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('https://django-react-nine.vercel.app/items/');
                 setData(response.data);
-            })
-            .catch(error => {
-                console.error('Error datos:', error);
-            });
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
     }, []);
 
     return (
@@ -32,8 +35,8 @@ function DataTable() {
             <Typography variant="h4" sx={{ textAlign: 'center', marginBottom: 4 }}>
                 Data Table
             </Typography>
-            <Button sx={{ backgroundColor: '#4E5ED2' }} color={"inherit"} component={Link} to="/reg">
-                Registrar nuevo Item
+            <Button sx={{ backgroundColor: '#4E5ED2' }} color="inherit" component={Link} to="/reg">
+                Register New Item
             </Button>
             <TableContainer component={Paper} sx={{ maxWidth: 800, margin: 'auto' }}>
                 <Table>

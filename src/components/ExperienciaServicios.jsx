@@ -1,8 +1,11 @@
 import React from 'react';
-import { Box, Card, CardMedia, CardContent, Typography, Grid } from '@mui/material';
+import { Box, Card, CardMedia, CardContent, Typography } from '@mui/material';
+import Slider from 'react-slick';
 import user1 from '../assets/Comentarios/user1.png';
 import user2 from '../assets/Comentarios/user2.png';
 import user3 from '../assets/Comentarios/user3.png';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function UserExperienceCard() {
     const experiences = [
@@ -38,14 +41,40 @@ function UserExperienceCard() {
         }
     ];
 
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
+
     return (
         <Box sx={{ padding: 4 }}>
             <Typography variant="h4" sx={{ textAlign: 'center', marginBottom: 4 }}>
                 La Experiencia de nuestros usuarios
             </Typography>
-            <Grid container spacing={4}>
+            <Slider {...settings}>
                 {experiences.map((experience, index) => (
-                    <Grid item xs={12} sm={6} md={4} key={index}>
+                    <Box key={index} sx={{ padding: 2 }}>
                         <Card sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: '#eef4ff', padding: 2 }}>
                             <CardMedia
                                 component="img"
@@ -58,9 +87,9 @@ function UserExperienceCard() {
                                 <Typography variant="body1" color="text.secondary">{experience.comment}</Typography>
                             </CardContent>
                         </Card>
-                    </Grid>
+                    </Box>
                 ))}
-            </Grid>
+            </Slider>
         </Box>
     );
 }

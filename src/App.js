@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
     return (
-        <Router basename={"/react"}>
+        <Router >
             <NavBar/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
