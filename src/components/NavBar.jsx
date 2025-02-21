@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
     return (
-        <AppBar position="fixed" sx={{ backgroundColor: '#2553cd' }}>
+        <AppBar position="fixed" sx={{ backgroundColor: '#0D1B2A' }}>
             <Toolbar>
                 <Box component={Link} to="/" sx={{ display: 'flex', alignItems: 'center' }}>
                     <Box component="img" src={Logo} alt="Logo" sx={{ height: 40, marginRight: 2 }} />
