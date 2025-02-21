@@ -1,94 +1,82 @@
-import React from 'react';
-import Slider from 'react-slick';
-import { Box, Card, CardMedia, CardContent, Typography, IconButton } from '@mui/material';
-import { ArrowBack, ArrowForward } from '@mui/icons-material';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import cocinaImg from '../assets/Slider/cocina.png';
-import banioImg from '../assets/Slider/banio.png';
-import interioresImg from '../assets/Slider/interiores.png';
+import React from "react";
+import { Box, Button, Typography } from "@mui/material";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
-function CarruselServicios() {
-    const servicios = [
-        { title: 'Reformas de Cocina', img: cocinaImg, desc: 'Diseños modernos y funcionales.' },
-        { title: 'Reformas de Baño', img: banioImg, desc: 'Espacios elegantes y cómodos.' },
-        { title: 'Reformas de Interiores', img: interioresImg, desc: 'Optimiza cada rincón de tu hogar.' },
-    ];
+const slides = [
+    {
+        id: 1,
+        title: "Agencia Digital especialista en Marketing",
+        subtitle: "Elegidos mejor página SONAX a nivel global",
+        buttonText: "Solicitar Cotización",
+        imageUrl: "https://th.bing.com/th/id/OIP.BlSqd7mwj2c4Po_ja1z-EQHaE8?rs=1&pid=ImgDetMain",
+    },
+    {
+        id: 2,
+        title: "Soluciones con Inteligencia Artificial",
+        subtitle: "Impulsamos tu negocio con tecnología avanzada",
+        buttonText: "Más Información",
+        imageUrl: "https://th.bing.com/th/id/OIP.Z_5g9OYXizO-PryFVZ_fuwHaHa?w=1080&h=1080&rs=1&pid=ImgDetMain",
+    },
+];
 
-    const NextArrow = (props) => {
-        const { onClick } = props;
-        return (
-            <IconButton
-                onClick={onClick}
-                sx={{
-                    position: 'absolute',
-                    top: '50%',
-                    right: '10px',
-                    transform: 'translateY(-50%)',
-                    zIndex: 1,
-                    color: 'white',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.7)' }
-                }}
-            >
-                <ArrowForward />
-            </IconButton>
-        );
-    };
-
-    const PrevArrow = (props) => {
-        const { onClick } = props;
-        return (
-            <IconButton
-                onClick={onClick}
-                sx={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '10px',
-                    transform: 'translateY(-50%)',
-                    zIndex: 1,
-                    color: 'white',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.7)' }
-                }}
-            >
-                <ArrowBack />
-            </IconButton>
-        );
-    };
-
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 8000,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />
-    };
-
+const CarruselServicios = () => {
     return (
-        <Box sx={{ width: '95%', margin: '0 auto', marginTop: '100px' }}>
-            <Slider {...settings}>
-                {servicios.map((servicio, index) => (
-                    <Card key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: '#eef4ff', color: 'black' }}>
-                        <CardMedia
-                            component="img"
-                            image={servicio.img}
-                            alt={servicio.title}
-                            sx={{ width: '100%', height: '550px' }}
-                        />
-                        <CardContent sx={{ height: '75px' }}>
-                            <Typography variant="h5">{servicio.title}</Typography>
-                            <Typography variant="body2">{servicio.desc}</Typography>
-                        </CardContent>
-                    </Card>
+        <Box sx={{ width: "100vw", height: "100vh", position: "relative" }}>
+            <Swiper
+                navigation
+                autoplay={{ delay: 5000 }}
+                loop
+                modules={[Navigation, Autoplay]}
+                style={{ width: "100%", height: "100%" }}
+            >
+                {slides.map((slide) => (
+                    <SwiperSlide key={slide.id}>
+                        <Box
+                            sx={{
+                                width: "100%",
+                                height: "100vh",
+                                backgroundImage: `url(${slide.imageUrl})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                position: "relative",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                color: "white",
+                                textAlign: "center",
+                                "&::before": {
+                                    content: '""',
+                                    position: "absolute",
+                                    top: 0,
+                                    left: 0,
+                                    width: "100%",
+                                    height: "100%",
+                                    background: "rgba(0, 0, 0, 0.5)", // Oscurece la imagen para mayor legibilidad
+                                },
+                            }}
+                        >
+                            <Box sx={{ zIndex: 2, maxWidth: "600px", px: 2 }}>
+                                <Typography variant="h4" fontWeight="bold">
+                                    {slide.title}
+                                </Typography>
+                                <Typography variant="h6" sx={{ mt: 1 }}>
+                                    {slide.subtitle}
+                                </Typography>
+                                <Button
+                                    variant="contained"
+                                    sx={{ mt: 3, bgcolor: "red", color: "white" }}
+                                >
+                                    {slide.buttonText}
+                                </Button>
+                            </Box>
+                        </Box>
+                    </SwiperSlide>
                 ))}
-            </Slider>
+            </Swiper>
         </Box>
     );
-}
-
+};
 export default CarruselServicios;

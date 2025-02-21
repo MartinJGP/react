@@ -7,6 +7,7 @@ import RegItems from './components/RegItems';
 
 import './App.css';
 import CarruselServicios from "./components/CarruselServicios";
+import FootPage from "./components/FootPage";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Router >
             <NavBar/>
             <CarruselServicios/>
+            <FootPage/>
             <Routes>
                 <Route path="/" component={RegItems} />
                 <Route path="/items" element={<DataTable/>}/>

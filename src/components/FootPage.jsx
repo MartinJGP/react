@@ -6,7 +6,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 function FootPage() {
     return (
-        <Box sx={{ backgroundColor: '#2553cd', color: 'white', padding: 4 }}>
+        <Box sx={{ backgroundColor: '#0D1B2A', color: 'white', padding: 4 }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
                 <Box sx={{ flex: 1, minWidth: 200, marginRight: 4 }}>
                     <Typography variant="h6" sx={{ borderBottom: '2px solid white', paddingBottom: 1 }}>Información</Typography>
@@ -56,7 +56,7 @@ function FootPage() {
                         fullWidth
                         sx={{ mb: 2, '& .MuiInputLabel-root': { color: 'white' }, '& .MuiFilledInput-root': { backgroundColor: '#ffffff33' } }}
                     />
-                    <Button variant="contained" color="primary" fullWidth>Enviar</Button>
+                    <Button variant="contained" sx={{backgroundColor:"#FF9800"}} fullWidth>Enviar</Button>
                 </Box>
             </Box>
         </Box>
