@@ -9,7 +9,7 @@ const slides = [
     {
         id: 1,
         title: "Agencia Digital especialista en Marketing",
-        subtitle: "Elegidos mejor página SONAX a nivel global",
+        subtitle: "Elegidos mejor página softclean a nivel global",
         buttonText: "Solicitar Cotización",
         imageUrl: "https://th.bing.com/th/id/OIP.BlSqd7mwj2c4Po_ja1z-EQHaE8?rs=1&pid=ImgDetMain",
     },
@@ -26,14 +26,16 @@ const CarruselServicios = () => {
     return (
         <Box sx={{ width: "100vw", height: "100vh", position: "relative" }}>
             <Swiper
-                navigation
+                navigation={false}
                 autoplay={{ delay: 5000 }}
                 loop
                 modules={[Navigation, Autoplay]}
                 style={{ width: "100%", height: "100%" }}
+
+
             >
                 {slides.map((slide) => (
-                    <SwiperSlide key={slide.id}>
+                    <SwiperSlide key={slide.id}  >
                         <Box
                             sx={{
                                 width: "100%",
@@ -67,7 +69,7 @@ const CarruselServicios = () => {
                                 </Typography>
                                 <Button
                                     variant="contained"
-                                    sx={{ mt: 3, bgcolor: "red", color: "white" }}
+                                    sx={{ mt: 3, bgcolor: "#FF9800", color: "white" }}
                                 >
                                     {slide.buttonText}
                                 </Button>
