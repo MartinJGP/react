@@ -17,29 +17,29 @@ function NavBar() {
         <AppBar position="fixed" sx={{ backgroundColor: '#0D1B2A', height: 80 }}>
             <Toolbar sx={{ justifyContent: 'space-between', paddingX: 4 }}>
                 <Box component={Link} to="/" sx={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                    <Box component="img" src={Logo} alt="Logo" sx={{ height: 65, marginX: 5 ,marginY:4 }} />
+                    <Box component="img" src={Logo} alt="Logo" sx={{ height: 65, marginX: 3 ,marginY:4 }} />
                 </Box>
                 <Button
                     onClick={() => login()}
                     variant="contained"
-                    startIcon={!isMobile && <Google />} // Oculta el ícono en pantallas pequeñas
-                    fullWidth={isMobile} // Hace que ocupe todo el ancho en móviles
+                    startIcon={ <Google />} // Oculta el ícono en pantallas pequeñas
                     sx={{
-                        backgroundColor: "#FF5722", // Color principal
+                        backgroundColor: "#FF9800", // Color principal
                         color: "#fff",
                         "&:hover": { backgroundColor: "#E64A19" }, // Color al pasar el mouse
-                        borderRadius: 20,
-                        padding: isMobile ? "10px 16px" : "12px 24px",
+                        borderRadius: 10,
+                        padding: isMobile ? "8px 10px" : "12px 24px",
                         textTransform: "none",
-                        fontSize: isMobile ? "0.85rem" : "1rem",
+                        fontSize: isMobile ? "0.80rem" : "1rem",
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        maxWidth: isMobile ? "90%" : "auto", // Máximo ancho en móvil
-                        margin: "0 auto", // Centrado en móviles
+                        maxWidth: isMobile ? "80%" : "auto", // Máximo ancho en móvil
+                        marginLeft: "auto", // Mueve el botón a la derecha
+                        marginRight: 2, // Añade espacio desde el borde derecho
                     }}
                 >
-                    {isMobile ? "Google" : "Iniciar sesión con Google"}
+                    {isMobile ? "Logearse" : "Iniciar sesión con Google"}
                 </Button>
 
             </Toolbar>

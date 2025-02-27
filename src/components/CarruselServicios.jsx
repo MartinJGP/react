@@ -18,7 +18,7 @@ const slides = [
         title: "Soluciones con Inteligencia Artificial",
         subtitle: "Impulsamos tu negocio con tecnología avanzada",
         buttonText: "Más Información",
-        imageUrl: "https://th.bing.com/th/id/OIP.Z_5g9OYXizO-PryFVZ_fuwHaHa?w=1080&h=1080&rs=1&pid=ImgDetMain",
+        imageUrl: "https://th.bing.com/th/id/OIP.9OCv4zgkI3q7-X2gTc_nSQHaE7?rs=1&pid=ImgDetMain",
     },
 ];
 

@@ -87,7 +87,7 @@ const Servicios = () => {
                     consideración estas preguntas. La elección de las empresas de marketing digital correctas te permitirá tomar
                     una mejor decisión.
                 </Typography>
-                <Grid container spacing={3} justifyContent="center" sx={{ mt: 3 }}>
+                <Grid container spacing={3} justifyContent="center" sx={{ mt: 3 ,my:5 }}>
                     {services.map((service, index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
                             <Card sx={{ p: 3, textAlign: "center", height: "100%" }}>
