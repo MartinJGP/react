@@ -4,13 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import {Link} from "react-router-dom";
 
 const slides = [
     {
         id: 1,
         title: "Agencia Digital especialista en Marketing",
-        subtitle: "Elegidos mejor página softclean a nivel global",
-        buttonText: "Solicitar Cotización",
+        subtitle: "Elegidos mejor página BcnClean a nivel global",
+        buttonText: "Solicita tu Solución Tecnológica",
         imageUrl: "https://th.bing.com/th/id/OIP.BlSqd7mwj2c4Po_ja1z-EQHaE8?rs=1&pid=ImgDetMain",
     },
     {
@@ -68,6 +69,8 @@ const CarruselServicios = () => {
                                     {slide.subtitle}
                                 </Typography>
                                 <Button
+                                    component={Link}
+                                    to="/solicitar"
                                     variant="contained"
                                     sx={{ mt: 3, bgcolor: "#FF9800", color: "white" }}
                                 >

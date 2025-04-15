@@ -19,19 +19,19 @@ function FootPage() {
                     <Typography variant="h6" sx={{ borderBottom: '2px solid white', paddingBottom: 1 }}>Contacto</Typography>
                     <Box sx={{ display: 'flex', alignItems: 'center', mt: 2 }}>
                         <PhoneIcon sx={{ mr: 1 }} />
-                        <Typography>+51 123 456 789</Typography>
+                        <Typography>+34 664 49 73 07</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
                         <PhoneIcon sx={{ mr: 1 }} />
-                        <Typography>+51 987 654 321</Typography>
+                        <Typography>+34 664 49 73 07</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
                         <EmailIcon sx={{ mr: 1 }} />
-                        <Typography>contacto@empresa.com</Typography>
+                        <Typography>soporte@bcnclean.com</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
                         <LocationOnIcon sx={{ mr: 1 }} />
-                        <Typography>Av. Principal 123, Ciudad, País</Typography>
+                        <Typography>Av. Principal 123, Ciudad, Barcelona</Typography>
                     </Box>
                 </Box>
                 <Box component="form" sx={{ flex: 1, minWidth: 300 }}>

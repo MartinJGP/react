@@ -6,6 +6,7 @@ import Logo from '../assets/Logo.png';
 import {GoogleLogin, useGoogleLogin} from "@react-oauth/google"; // Adjust the path as necessary
 import { Link } from 'react-router-dom';
 import {Google} from "@mui/icons-material";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 function NavBar() {
     const login = useGoogleLogin({
@@ -16,8 +17,49 @@ function NavBar() {
     return (
         <AppBar position="fixed" sx={{ backgroundColor: '#0D1B2A', height: 80 }}>
             <Toolbar sx={{ justifyContent: 'space-between', paddingX: 4 }}>
-                <Box component={Link} to="/" sx={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                    <Box component="img" src={Logo} alt="Logo" sx={{ height: 65, marginX: 3 ,marginY:4 }} />
+                <Box
+                    component={Link}
+                    to="/"
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        height: '100%',
+                        marginX: isMobile ? 0 : 1, // Menos margen lateral en móviles
+                    }}
+                >
+                    <Box
+                        component="img"
+                        src={Logo}
+                        alt="Logo"
+                        sx={{
+                            height: 65,
+                            marginX: isMobile ? 0 : 1,
+                            marginY: 4,
+                        }}
+                    />
+                </Box>
+
+                <Box
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        color: 'white',
+
+                        paddingRight: isMobile ? 1 : 4
+                    }}
+                >
+                    <IconButton sx={{ color: 'white' }}>
+                        <PhoneIcon sx={{ marginRight: isMobile ? 0.5 : 1 }} />
+                        <Typography
+                            variant="body1"
+                            sx={{
+                                marginRight: isMobile ? 0 : 1,
+                                fontSize: isMobile ? '0.8rem' : '1rem' // Ajusta el tamaño del texto
+                            }}
+                        >
+                            34 664 49 73 07
+                        </Typography>
+                    </IconButton>
                 </Box>
                 <Button
                     onClick={() => login()}
